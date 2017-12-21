@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title text-center>
+            Calculadora
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form #formulario="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Cantidad de CBFIs </ion-label>
+                <ion-input required type="number" name="cbis" [(ngModel)]="cbis"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fecha inicial</ion-label>
+                <ion-datetime required name="start_date" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="start_date" placeholder="DD/MM/YYYY"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fecha final</ion-label>
+                <ion-datetime required name="end_date" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="end_date" placeholder="DD/MM/YYYY"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Emisora </ion-label>
+                <ion-select required [(ngModel)]="emisira" name="emisora" placeholder="Seleccione" [(ngModel)]="emisora">
+                    <ion-option value="148">FIBRA</ion-option>
+                    <ion-option value="40">TRAXION</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <button [disabled]="!formulario.valid" ion-button full padding (click)="calcular()">Calcular</button>
+            </ion-item>
+        </ion-list>
+    </form>
+
+</ion-content>

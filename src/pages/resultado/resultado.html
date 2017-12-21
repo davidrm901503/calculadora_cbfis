@@ -1,0 +1,73 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title text-center>Resultado</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-card>
+            <ion-card-header>
+                <ion-label color="primary">Inversión inicial </ion-label>
+            </ion-card-header>
+
+            <ion-list>
+                <ion-item>
+                    <p><strong> Precio CBFI: </strong> ${{precio_i}}</p>
+                    <p><strong> Cantidad de CBFI:</strong> {{cant_cbis}}</p>
+                    <p><strong> Monto invertido:</strong> ${{monto_i}}</p>
+                </ion-item>
+
+            </ion-list>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-header>
+                <ion-label color="primary">Dividendos recibidos </ion-label>
+            </ion-card-header>
+
+            <ion-list>
+                <ion-item>
+                    <p><strong> Cantidad de CBFI:</strong> {{cant_cbis}}</p>
+                    <p><strong> Dividendos en el periodo por CBFI:</strong> ${{dividendos_p}}</p>
+                    <p><strong>Dividendos Recibidos:</strong> ${{monto_d}}</p>
+                </ion-item>
+            </ion-list>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-header>
+                <ion-label color="primary">Resultado final </ion-label>
+            </ion-card-header>
+
+            <ion-list>
+                <ion-item>
+                    <p><strong>Precio CBFI:</strong> ${{precio_f}}</p>
+                    <p><strong>Valor inversión:</strong> ${{monto_f}}</p>
+                    <p><strong>Rendimiento:</strong> ${{rendimiento}}</p>
+                    <p><strong>Rendimiento:</strong> {{rendimiento_p}}%</p>
+                </ion-item>
+
+            </ion-list>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-label color="primary">Rendimiento final </ion-label>
+            </ion-card-header>
+
+            <ion-list>
+                <ion-item>
+                    <p><strong> Rendimiento total:</strong> ${{rendimiento_t}}</p>
+                    <p><strong> Rendimiento total:</strong> {{rendimiento_tp}}%</p>
+                    <p><strong>Rendimiento anualizado:</strong> {{rendimiento_a}}%</p>
+                </ion-item>
+
+            </ion-list>
+        </ion-card>
+    </ion-list>
+
+</ion-content>
